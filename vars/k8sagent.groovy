@@ -22,7 +22,6 @@ def call(Map opts = [:]) {
   sh "echo ${nodeSelector}"
   sh "echo ${jnlpImage}"
   sh "echo ${doxygen_image}"
-  sh "echo ${TEMPLATE_DOXYGEN_IMAGE}"
 
   try {
     doxygen_image = "${TEMPLATE_DOXYGEN_IMAGE}"
