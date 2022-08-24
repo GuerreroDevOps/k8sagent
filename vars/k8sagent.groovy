@@ -14,7 +14,15 @@ def call(Map opts = [:]) {
 
   String doxygen_image
 
+  sh 'VARIABLES'
+  sh "echo ${name}"
   sh "echo ${defaultLabel}"
+  sh "echo ${label}"
+  sh "echo ${cloud}"
+  sh "echo ${nodeSelector}"
+  sh "echo ${jnlpImage}"
+  sh "echo ${doxygen_image}"
+  sh "echo ${TEMPLATE_DOXYGEN_IMAGE}"
 
   try {
     doxygen_image = "${TEMPLATE_DOXYGEN_IMAGE}"
