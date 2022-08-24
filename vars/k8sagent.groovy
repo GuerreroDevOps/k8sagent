@@ -14,7 +14,7 @@ def call(Map opts = [:]) {
 
   String doxygen_image
 
-  echo defaultLabel
+  sh "echo ${defaultLabel}"
 
   try {
     doxygen_image = "${TEMPLATE_DOXYGEN_IMAGE}"
